@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+body {
+  font-family:fantasy;
+}
+
+#vanta {
+  height: 100vh; /* or any specific height */
+  width: 100vw; /* or any specific width */
+}
