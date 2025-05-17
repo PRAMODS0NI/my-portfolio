@@ -101,21 +101,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
             className="relative"
           >
-            <motion.div
-              className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden ring-2 ring-white/10"
-              animate={{
-                boxShadow: [
-                  "0 0 0 0 rgba(255,255,255,0.1)",
-                  "0 0 0 10px rgba(255,255,255,0.1)",
-                  "0 0 0 0 rgba(255,255,255,0.1)",
-                ],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
+            <motion.div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden ring-2 ring-white/20">
               <img
                 src={profile}
                 alt="Pramod Soni"
