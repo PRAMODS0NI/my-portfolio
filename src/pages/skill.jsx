@@ -140,13 +140,19 @@ const Skill = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div id="skills" className="w-full h-svh flex items-center justify-center ">
+    <div
+      id="skills"
+      className="w-full h-svh flex-col items-center justify-center "
+    >
+      <h1 className="text-5xl text-center my-20 font-extrabold text-white drop-shadow-[0_0_16px_rgba(168,85,247,0.7)]">
+        Skills
+      </h1>
       <motion.div
         ref={ref}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         variants={containerVariants}
-        className="grid grid-cols-5 sm:grid-cols-2 md:grid-cols-6 gap-20 px-10 rounded-2xl"
+        className="grid grid-cols-3  sm:grid-cols-2 md:grid-cols-6 gap-20 px-10 rounded-2xl"
       >
         {skills.map((skill, idx) => (
           <motion.div
@@ -158,7 +164,7 @@ const Skill = () => {
               scale: 1.08,
               boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
             }}
-            className="flex flex-col cursor-pointer items-center justify-center md:py-10 md:px-10 bg-white/10  rounded-xl transition-all"
+            className="flex flex-col cursor-pointer items-center justify-center md:py-10 md:px-10 md:bg-white/10  rounded-xl transition-all"
           >
             {skill.icon}
           </motion.div>
