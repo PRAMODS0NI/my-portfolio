@@ -140,10 +140,7 @@ const Skill = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div
-      id="skills"
-      className="w-full h-svh flex-col items-center justify-center "
-    >
+    <div id="skills" className="w-full h-svh flex flex-col justify-center ">
       <h1 className="text-5xl text-center my-20 font-extrabold text-white drop-shadow-[0_0_16px_rgba(168,85,247,0.7)]">
         Skills
       </h1>
@@ -152,7 +149,7 @@ const Skill = () => {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         variants={containerVariants}
-        className="grid grid-cols-3  sm:grid-cols-2 md:grid-cols-6 gap-20 px-10 rounded-2xl"
+        className="grid grid-cols-3  sm:grid-cols-2 md:grid-cols-6 gap-10 px-10 rounded-2xl"
       >
         {skills.map((skill, idx) => (
           <motion.div

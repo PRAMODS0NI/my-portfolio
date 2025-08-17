@@ -56,7 +56,7 @@ const Hero = () => {
               variants={itemVariants}
               className="text-gray-300 text-lg mb-8 max-w-lg"
             >
-              <b className="drop-shadow-[0_0_10px_white]">Frontend Developer</b>{" "}
+              <b className="drop-shadow-[0_0_10px_white]">Frontend Engineer</b>{" "}
               passionate about creating seamless web and mobile experiences with
               clean code
             </motion.p>
