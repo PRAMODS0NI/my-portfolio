@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import VantaWaves from "vanta/dist/vanta.waves.min";
 import * as THREE from "three";
-import Hero from "./hero";
-import Skill from "./skill";
+import Hero from "./pages/hero";
+import Skill from "./pages/skill";
+import About from "./pages/about";
 
 const Home = () => {
   const [vantaEffect, setVantaEffect] = useState(null);
@@ -50,10 +51,11 @@ const Home = () => {
   return (
     <div className="relative h-dvh">
       <div id="vanta" className="fixed top-0 left-0 w-full h-full" />
-      <div className="relative z-10 overflow-x-hidden">
+      <div className="relative z-10 max-w-6xl overflow-x-hidden mx-auto">
         {" "}
         {/* Add overflow control */}
         <Hero />
+        <About />
         <Skill />
       </div>
     </div>

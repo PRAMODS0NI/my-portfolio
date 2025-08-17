@@ -1,7 +1,8 @@
 import React from "react";
-import { motion } from "framer-motion"; // Fix the import
-import profile from "./assets/profile3.svg";
+import { motion } from "framer-motion";
+import profile from "../assets/profile3.svg";
 import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import Dock from "../components/Dock";
 
 const Hero = () => {
   const isMobile = window.innerWidth <= 768;
@@ -28,9 +29,12 @@ const Hero = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
+      id="home"
     >
+      <Dock />
+
       <div className="container mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+        <div className="flex flex-col md:flex-row items-center justify-evenl gap-12">
           {/* Left content */}
           <motion.div
             variants={itemVariants}
@@ -44,7 +48,7 @@ const Hero = () => {
             </motion.h2>
             <motion.h1
               variants={itemVariants}
-              className="text-5xl md:text-6xl font-bold text-white mb-6"
+              className="text-5xl md:text-6xl font-bold text-purple-500 drop-shadow-[0_0_10px_rgba(168,85,247,0.7)] mb-6"
             >
               Pramod Soni
             </motion.h1>
@@ -52,8 +56,9 @@ const Hero = () => {
               variants={itemVariants}
               className="text-gray-300 text-lg mb-8 max-w-lg"
             >
-              A passionate developer crafting digital experiences through clean
-              and efficient code
+              <b className="drop-shadow-[0_0_10px_white]">Frontend Developer</b>{" "}
+              passionate about creating seamless web and mobile experiences with
+              clean code
             </motion.p>
             <motion.div
               variants={itemVariants}
@@ -67,7 +72,7 @@ const Hero = () => {
                 },
                 {
                   icon: FaLinkedin,
-                  href: "https://www.linkedin.com/in/pramod-soni-2b6191249/",
+                  href: "https://www.linkedin.com/in/pramod-soni",
                   color: "text-blue-400",
                 },
                 {
@@ -89,7 +94,7 @@ const Hero = () => {
                   whileHover={{ y: -3 }}
                   className={`${item.color} hover:opacity-80 transition-opacity`}
                 >
-                  <item.icon size={24} />
+                  <item.icon size={27} />
                 </motion.a>
               ))}
             </motion.div>
